@@ -1,5 +1,5 @@
 class Kata {
-    static countBy(x, n) {
-        // code here
+    static countBy(int x, int n) {
+        return (1..n).stream().map { it * x}.collect()
     }
 }
