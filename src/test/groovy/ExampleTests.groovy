@@ -1,12 +1,15 @@
 import org.junit.jupiter.api.Test
 
-class ExampleTests {
+
+class PotatoesTest {
+
+    private static void dotest(int p0, int w0, int p1, int expected) {
+        assertEquals(expected, Potatoes.potatoes(p0, w0, p1));
+    }
+
     @Test
-    void "Exampl Tests"() {
-        assert Kata.switcheroo("abc") == "bac"
-        assert Kata.switcheroo('aaabcccbaaa') == 'bbbacccabbb'
-        assert Kata.switcheroo('ccccc') == 'ccccc'
-        assert Kata.switcheroo('abababababababab') == 'babababababababa'
-        assert Kata.switcheroo('aaaaa') == 'bbbbb'
+    public void test() {
+        dotest(82, 127, 80, 114);
+        dotest(93, 129, 91, 100);
     }
 }

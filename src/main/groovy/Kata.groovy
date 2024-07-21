@@ -1,8 +1,6 @@
-class Kata {
-    static def switcheroo(String string) {
+class Potatoes {
 
-        def abMap = ['a': 'b', 'b': 'a']
-        string.split('').collect { sign -> abMap.getOrDefault(sign, sign) }.join('')
-
+    public static int potatoes(int p0, int w0, int p1) {
+        // your code
     }
 }
