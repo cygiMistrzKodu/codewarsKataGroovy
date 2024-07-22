@@ -2,27 +2,13 @@ class Kata{
     public static final notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
     static chords(String root){
 
-        def rootNotePosition = notes.indexOf(root)
+        def rootIndex = notes.indexOf(root)
+        def minorChord = (rootIndex + 3) % notes.size()
+        def majorChord = (rootIndex + 4) % notes.size()
+        def seventh = (rootIndex + 7) % notes.size()
 
-        def secondMajorSemitone = foundSemitonePosition(rootNotePosition, 4)
-        def secondMinorSemitone = foundSemitonePosition(rootNotePosition, 3)
-        def thirdSemitone = foundSemitonePosition(rootNotePosition, 7)
-
-
-        def majorChord = [root,notes[secondMajorSemitone] , notes[thirdSemitone]]
-        def minorChord = [root,notes[secondMinorSemitone] , notes[thirdSemitone]]
-
-        [majorChord,minorChord]
-
+        return [[root, notes[majorChord], notes[seventh]], [root, notes[minorChord], notes[seventh]]]
 
     }
 
-    private static int foundSemitonePosition(int rootNotePosition, int semitonePositionFromRoot) {
-        def searchSemitonePosition = rootNotePosition + semitonePositionFromRoot
-
-        if (searchSemitonePosition >= notes.size()) {
-            searchSemitonePosition = searchSemitonePosition -  notes.size()
-        }
-        searchSemitonePosition
-    }
 }
