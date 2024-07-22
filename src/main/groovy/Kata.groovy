@@ -1,11 +1,5 @@
-class Kata {
-    static String oddOrEven(List<Integer> list) {
-
-        if (list.isEmpty()) {
-            return 'even'
-        }
-
-        list.sum() % 2 == 0 ? 'even' : 'odd'
-
+class Kata{
+    public static final notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+    static chords(root){
     }
 }
