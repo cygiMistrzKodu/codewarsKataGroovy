@@ -1,16 +1,23 @@
+
 import org.junit.jupiter.api.Test
-import static org.junit.jupiter.api.Assertions.*
 
-
-class PotatoesTest {
-
-    private static void dotest(int p0, int w0, int p1, int expected) {
-        assertEquals(expected, Potatoes.potatoes(p0, w0, p1));
-    }
-
+class TestExample {
     @Test
-    public void test() {
-        dotest(82, 127, 80, 114);
-        dotest(93, 129, 91, 100);
+    void "Fixed tests"() {
+        assert Kata.oddOrEven([0]) == "even"
+        assert Kata.oddOrEven([1]) == "odd"
+        assert Kata.oddOrEven([]) == "even"
+        assert Kata.oddOrEven([0, 1, 5]) == 'even'
+        assert Kata.oddOrEven([0, 1, 3]) == 'even'
+        assert Kata.oddOrEven([1023, 1, 2]) == 'even'
+        assert Kata.oddOrEven([0, -1, -5]) == 'even'
+        assert Kata.oddOrEven([0, -1, -3]) == 'even'
+        assert Kata.oddOrEven([-1023, 1, -2]) == 'even'
+        assert Kata.oddOrEven([0, 1, 2]) == 'odd'
+        assert Kata.oddOrEven([0, 1, 4]) == 'odd'
+        assert Kata.oddOrEven([1023, 1, 3]) == 'odd'
+        assert Kata.oddOrEven([0, -1, 2]) == 'odd'
+        assert Kata.oddOrEven([0, 1, -4]) == 'odd'
+        assert Kata.oddOrEven([-1023, -1, 3]) == 'odd'
     }
 }
