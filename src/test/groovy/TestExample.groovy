@@ -1,10 +1,11 @@
 import org.junit.jupiter.api.Test
+import static org.junit.jupiter.api.Assertions.assertEquals
 
-class TestExample {
+class ExampleTests {
+    private final def epsilon = 0.001
     @Test
-    void "Basic Tests"() {
-        assert Kata.chords("C") == [["C","E","G"],["C","D#","G"]]
-        assert Kata.chords("F") == [["F","A","C"],["F","G#","C"]]
-        assert Kata.chords("G") == [["G","B","D"],["G","A#","D"]]
+    void "Example Tests"() {
+        assertEquals(1.0, Dinglemouse.stackHeight2d(1), epsilon)
+        assertEquals(1.866, Dinglemouse.stackHeight2d(2), epsilon)
     }
 }
