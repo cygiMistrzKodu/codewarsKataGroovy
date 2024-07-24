@@ -1,5 +1,5 @@
 class Dinglemouse {
     static def stackHeight2d(layers) {
-       return 0
+        return layers==0 ? 0 : 0.86602*layers + 0.134;
     }
 }
