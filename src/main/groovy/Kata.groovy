@@ -1,5 +1,10 @@
 class BMWRemover {
     static removeBMW(str) {
-        // code here
+
+        if (!(str instanceof String)) {
+            throw new IllegalArgumentException("This program only works for text.")
+        }
+
+        return str.findAll("[^BMWbmw]").join("")
     }
 }
