@@ -1,11 +1,16 @@
 import org.junit.jupiter.api.Test
-import static org.junit.jupiter.api.Assertions.assertEquals
 
-class ExampleTests {
-    private final def epsilon = 0.001
+class ExampleTets {
     @Test
     void "Example Tests"() {
-        assertEquals(1.0, Dinglemouse.stackHeight2d(1), epsilon)
-        assertEquals(1.866, Dinglemouse.stackHeight2d(2), epsilon)
+        assert Kata.dative("ablak") == "ablaknak"
+        assert Kata.dative("tükör") == "tükörnek"
+        assert Kata.dative("keret") == "keretnek"
+        assert Kata.dative("otthon") == "otthonnak"
+        assert Kata.dative("virág") == "virágnak"
+        assert Kata.dative("tett") == "tettnek"
+        assert Kata.dative("rokkant") == "rokkantnak"
+        assert Kata.dative("rossz") == "rossznak"
+        assert Kata.dative("gonosz") == "gonosznak"
     }
 }
